@@ -1,3 +1,5 @@
+window.onload = () =>{}
+
 step =(e)=>{
 	size=1/12
 	if(e.key==","){vid.currentTime-=size}
@@ -41,4 +43,11 @@ while (!x) {
 
 speedUpdate = () =>{
 	vid.playbackRate = +speed.value
+}
+
+pauser = (e) =>{vid.blur();
+	if((e.key==" ")){
+	if(vid.paused) {vid.play() }
+	else           {vid.pause()}
+	}
 }
