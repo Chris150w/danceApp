@@ -7,7 +7,10 @@
       .vjs-fluid {
         padding-top: 56.25%
       }
-    </style></head><body><header>
+    </style></head>
+
+<body onkeydown= "pauser(event)">
+<header>
 <link rel="stylesheet" href="phone.css">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="https://unpkg.com/7.css">
@@ -22,7 +25,13 @@
   <div class="title-bar-text"> Example Dance</div>	
  </div>
  <div class="window-body has-space">
-<video src="Me Gustas Tu.webm" id="vid" controls="" onkeydown="step(event)" ontimeupdate="looper(event)"></video>
+
+<video id="vid" class="video-js vjs-default-skin vjs-big-play-centered"
+    controls= "false"
+    preload="auto"
+    onkeydown="step(event)" ontimeupdate="looper(event)">
+	<source src="Example.mp4" type="video/mp4">
+</video>
 
 <fieldset id="looperControl">
 
